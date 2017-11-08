@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryAndDie", "TryAndDie\TryAndDie.csproj", "{3173CC3D-C2F4-455A-8080-1294F98588F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfForCrawler", "WcfForCrawler\WcfForCrawler.csproj", "{936E419B-6D11-473B-BD17-E2AA32F71099}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3173CC3D-C2F4-455A-8080-1294F98588F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3173CC3D-C2F4-455A-8080-1294F98588F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3173CC3D-C2F4-455A-8080-1294F98588F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3173CC3D-C2F4-455A-8080-1294F98588F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{936E419B-6D11-473B-BD17-E2AA32F71099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936E419B-6D11-473B-BD17-E2AA32F71099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936E419B-6D11-473B-BD17-E2AA32F71099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936E419B-6D11-473B-BD17-E2AA32F71099}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B3C6E56-2482-4072-8E7E-94AA7F04AD39}
+	EndGlobalSection
+EndGlobal
