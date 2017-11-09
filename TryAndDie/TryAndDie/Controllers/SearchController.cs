@@ -11,15 +11,15 @@ namespace TryAndDie.Controllers
     [Route("api/[controller]")]
     public class SearchController : Controller
     {
-        RvuniqueCrawler rc;
+        
         public SearchController()
         {
-            rc = new RvuniqueCrawler();
+            
         }
        [HttpGet("[action]")]
         public IEnumerable<Item> GetItems()
         {
-            var lol = rc.Run();
+            RvuniqueCrawler.Run();
             //var items = new[]
             //{
             //     new Item
