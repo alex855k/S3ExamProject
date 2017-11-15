@@ -7,8 +7,6 @@ using DotnetSpider.Core.Scheduler;
 using DotnetSpider.Core.Selector;
 using DotnetSpider.Core.Downloader;
 using System.Text;
-using System.Web;
-using System.Net;
 
 namespace TryAndDie.Model.WebCrawlers
 {
@@ -80,33 +78,26 @@ namespace TryAndDie.Model.WebCrawlers
              
         protected override void Handle(Page page)
         {
-            var stringDomain = "http://www.rvunique.dk";
-            List<ItemModel> items = new List<ItemModel>();
             var mylist = new List<string>();
-            
-            var tb = page.Selectable.SelectList(Selectors.XPath("//div[@class = 'products']//tbody")).Nodes()[0];
-            var trNodes = tb.SelectList(Selectors.XPath(".//tr")).Nodes();
+            //foreach (var uri in uriList)
+            //{
+                var tb = page.Selectable.SelectList(Selectors.XPath("//div[@class = 'products']//tbody")).Nodes()[0];
+                var trNodes = tb.SelectList(Selectors.XPath(".//tr")).Nodes();
                 
-            foreach (var tr in trNodes)
-            {
-                var undecodedUriString = tr
-                    .SelectList(Selectors.XPath(".//td[@class= 'ac thumb']//img/@src"))
-                    .GetValue();
-                var decodedeUriString = WebUtility.HtmlDecode(undecodedUriString);
-                var uri = new Uri(decodedeUriString);
+                foreach (var tr in trNodes)
+                {
+                    //var image = tr
+                    //    .SelectList(Selectors.XPath("."))
 
 
-
-
-
-                //var code = tr
-                //        .SelectList(Selectors.XPath(".//span[@class='art']"))
-                //        .Nodes()[0]
-                //        .GetValue()
-                //        .Trim();
-                //mylist.Add(r);
-            }
-            
+                    var code = tr
+                            .SelectList(Selectors.XPath(".//span[@class='art']"))
+                            .Nodes()[0]
+                            .GetValue()
+                            .Trim();
+                    mylist.Add(code);
+                }
+            //}
             page.AddResultItem("codes", mylist);
             page.AddTargetRequests(uriStringList);
 

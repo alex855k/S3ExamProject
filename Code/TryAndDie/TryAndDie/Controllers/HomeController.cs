@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TryAndDie.Controllers
 {
+    //[Route("api/[controller]")]
+
     public class HomeController : Controller
     {
         public IActionResult Index()
